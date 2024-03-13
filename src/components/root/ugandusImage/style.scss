@@ -1,0 +1,138 @@
+.ugandus-image{
+    width: 25vw;
+    position: relative;
+    transition: translate 0.5s;
+    transition: scale 0.5s;
+
+    @media (max-width: 600px) {
+        width: 60vw;
+        translate: -15% 0;
+        scale: 0.6;
+    }
+
+    @media (max-width: 440px) {
+        scale: 0.9;
+    }
+    @media (max-height: 700px) and (max-width: 600px)  {
+        scale: 0.75 ;
+    }
+
+    .ugandus{
+       width: 100%
+    }
+
+    &-eye{
+
+        &-left{
+            width: 11px;
+            position: absolute;
+            left: 48%;
+            bottom: 58%;
+        
+        }
+        &-right{
+            width: 11px;
+            position: absolute;
+            right: 23%;
+            top: 38%;
+            @media (max-width: 600px) {
+                right: 20%; 
+            }
+        }
+    }
+
+    &-cloud{
+        &-1{
+            position: absolute;
+            top: 47%;
+            right: 8%;
+            width: 10%;
+            opacity: 0;
+            animation: 0.5s ease-in-out 0.5s cloud-fade-in forwards;
+            transition: 0.5s;
+            @media (max-width: 600px) {
+            
+                top: 30%;
+                right: 21%;
+            }
+        }
+
+        &-2{
+            position: absolute;
+            top: 41%;
+            right: -6%;
+            width: 15%;
+            opacity: 0;
+            animation: 0.5s ease-in-out 0.6s cloud-fade-in forwards;
+            transition: 0.5s;
+            @media (max-width: 600px) {
+                
+                top: 23%;
+                right: 11%;
+            }
+        }
+
+        &-3{
+            position: absolute;
+            top: 33%;
+            right: -25%;
+            width: 20%;
+            opacity: 0;
+            animation: 0.5s ease-in-out 0.7s cloud-fade-in forwards;
+            transition: 0.5s;
+            @media (max-width: 600px) {
+              
+                top: 11%;
+                right: 3%;
+            }
+        }
+        &-4{
+            position: absolute;
+            top: 10%;
+            right: -75%;
+            width: 60%;
+            opacity: 0;
+            animation: 0.4s ease-in-out 1s cloud-fade-in forwards;
+            transition: 0.5s;
+            @media (max-width: 600px) {
+             
+                top: -14%;
+                right: -44%;
+            }
+        }
+
+    }
+    .text{
+        color: #000;
+        position: absolute;
+        width: 60%;
+        opacity: 0;
+        z-index: 4;
+        animation: 0.4s ease-in-out 1s cloud-fade-in forwards;
+        top: 18%;
+        right: -90%;
+        font-size: 1.8vw;
+
+        @media (max-width: 600px) {
+             
+            top: -6%;
+            right: -60%;
+            font-size: 4vw;
+        }
+    }
+
+    #eyeball{
+        width: 5%;
+    }
+
+    @keyframes cloud-fade-in {
+        from{
+            scale: 0.5;
+            opacity: 0;
+        }
+        to{
+            scale: 1;
+            opacity: 1;
+        }
+    }
+}
