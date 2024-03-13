@@ -29,23 +29,19 @@ export default function Root () {
     return (
         <div className="root-p cen">
             {/* <UgandusImage /> */}
-            <img src="/bg.png" className="bg"/>
+            <img src="/bg-desc.jpg" className="bg"/>
             <div className="title">
-                MAKE ANTARCTIDA <br /> GREAT AGAIN
+                MAKE ANTARCTICA <br /> GREAT AGAIN
             </div>
-            {
-                width > 700 &&
-                <div className="bottom-text">
+            <a href="https://solscan.io/token/3vfaqZRL6Qjy8VRodWjXSs2AtRL7KFoByVk6ULvLyC7Z" target="_blank" className="bottom-text cen">
                 <div className="bottom-text-inner">
-                    CA: A3eME5CetyZPBoWbRUwY3tSe25S6tb18ba9ZPbWk9eFJ
+                    CA: 3vfaqZRL6Qjy8VRodWjXSs2AtRL7KFoByVk6ULvLyC7Z
                 </div>
-                </div>
-            }
-
+            </a>
             <Button title="$trempeng" linkTo="/" style={trempeng}/>
             <Button title="buy now" linkTo="/" style={buyNow}/>
-            <Button title="twitter" linkTo="/" style={twitter}/>
-            <Button title="telegram" linkTo="/" style={telegram}/>
+            <Button title="twitter" linkTo="https://twitter.com/TREMPENGSOL" style={twitter}/>
+            <Button title="telegram" linkTo="https://t.me/TREMPENG" style={telegram}/>
         </div>
     )
 }
