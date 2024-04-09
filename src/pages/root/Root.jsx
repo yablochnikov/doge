@@ -46,7 +46,8 @@ export default function Root() {
       <div className='cen'>
         <div className='bottom-content'>
           <div className='title'>
-            In Based Doge <br /> We Trust
+            DONT FADE <br />
+            BLUE DOGE.
           </div>
           <a
             href='https://solscan.io/token/3vfaqZRL6Qjy8VRodWjXSs2AtRL7KFoByVk6ULvLyC7Z'
