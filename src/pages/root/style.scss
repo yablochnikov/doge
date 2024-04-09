@@ -1,23 +1,23 @@
-@import url('https://fonts.cdnfonts.com/css/valorant');
-
 .root-p {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   position: relative;
-  background-color: rgba(37, 150, 255, 1);
+  background-image: url('/bg-desc.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 768px) {
+    background-image: url('/bg-mobile.png');
+  }
 
   .title {
-    font-family: 'VALORANT', sans-serif;
-
-    position: absolute;
-    top: 10vh;
-    left: 50%;
-    translate: -50% 0;
-    font-size: 3.5vw;
+    font-size: 80px;
+    margin-top: auto;
+    margin-bottom: 31px;
     text-align: center;
     color: rgba(18, 24, 60, 1);
-
     background: linear-gradient(-45deg, #ffffff, #ffffff);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -25,53 +25,102 @@
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     width: 100%;
-    // text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.154);
 
-    @media (max-width: 700px) {
-      font-size: 30px;
-      -webkit-text-stroke: 5px transparent;
-      padding: 5px;
+    @media (max-width: 1440px) {
+      font-size: 60px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 40px;
+      margin-bottom: 21px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+      margin-bottom: 21px;
+    }
+  }
+
+  .bottom-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    position: absolute;
+    margin-bottom: 40px;
+    bottom: 0;
+
+    @media (max-width: 768px) {
+      bottom: 0;
+      position: absolute;
+      padding: 10px;
     }
   }
 
   .bottom-text {
-    color: rgb(18, 24, 60);
-    background-color: rgb(255, 255, 255);
-    border: 7px solid rgb(18, 24, 60);
-    padding: 5px 2vw;
-    font-size: 2vw;
-    border-radius: 1.5vw;
+    position: relative;
+    color: #12183c;
+    padding: 16px 24px;
+    background: #fff;
     text-transform: uppercase;
-    padding: auto;
-    position: absolute;
-    bottom: 3vh;
-    scale: 0.6;
+    font-size: 20px;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.25);
+
     &-inner {
       translate: 0 10%;
     }
 
-    @media (max-width: 600px) {
-      bottom: auto;
-      top: 330px;
-      font-size: 4.3vw;
-      width: 147vw;
-      border-radius: 20px;
-      padding: 10px 0;
-      // border-width: 4px;
-    }
-  }
-  .bg {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    translate: 0 100px;
-
     @media (max-width: 1440px) {
-      translate: 0 60px;
+      padding: 12px 18px;
+      font-size: 16px;
     }
-    @media (max-width: 700px) {
-      width: 200%;
-      translate: 0 30px;
+
+    @media (max-width: 1300px) {
+      padding: 8px 12px;
+      font-size: 10px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 9px;
+      text-align: center;
+    }
+
+    &::before,
+    &::after {
+      content: url('/btn-corner.svg');
+      position: absolute;
+
+      -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+
+      @media (max-width: 1300px) {
+        content: '';
+      }
+    }
+
+    &::before {
+      left: -7px;
+      bottom: -15px;
+
+      @media (max-width: 1440px) {
+        bottom: -12px;
+      }
+    }
+
+    &::after {
+      bottom: -9px;
+      transform: rotate(180deg);
+      right: -7px;
+
+      @media (max-width: 1440px) {
+        bottom: -22px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      bottom: auto;
     }
   }
 }
